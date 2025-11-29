@@ -128,11 +128,11 @@ Run the script inside the poetry environment:
 github_connector_project/
 ├── github_connector/
 │   ├── __init__.py
-│   ├── client.py
+│   ├── githubAPIclient.py
 │   └── custom_exceptions.py
 ├── tests/
 │   ├── __init__.py
-│   └── test_client.py
+│   └── test_githubclient.py
 ├── main.py
 ├── pyproject.toml
 ├── poetry.lock
@@ -153,7 +153,7 @@ Test Requirements
 ✔ Mocked retry sequence [429, 429, 200] → retries with exponential backoff
 No real GitHub API calls should be made during testing.
 
-🔧 Developer Notes
+## 🔧 Developer Notes
 Dependencies
 
 
