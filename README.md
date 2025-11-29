@@ -27,28 +27,24 @@ github_connector solves this by providing:
 ```
 
 ## Features
-Core Functionalities
+```
+  Core Functionalities
 
 
-Fetch repository details (stars, forks, description, etc.)
+  Fetch repository details (stars, forks, description, etc.)
 
 
-Fetch the latest release of any repository
+  Fetch the latest release of any repository
+  Secure authentication via GITHUB_TOKEN
 
 
-Secure authentication via GITHUB_TOKEN
+  Automatic retry for:
 
 
-Automatic retry for:
+  403 Forbidden (rate-limited)
 
 
-403 Forbidden (rate-limited)
-
-
-429 Too Many Requests
-
-
-
+  429 Too Many Requests
 
 Exponential backoff (1s → 2s → 4s)
 
@@ -58,33 +54,18 @@ Resilience & Observability
 
 Graceful handling of network errors
 
-
-Custom library exceptions, not raw requests errors
-
-
-Structured logging at multiple levels (INFO, WARNING, ERROR)
-
-
-Developer Experience
-
-
 Poetry-powered dependency management
-
-
 Type-hinted API
-
-
-Full unit test suite
-
-
 Clean .gitignore
 
 
 Well-documented class and methods
 
+```
 
 
-📦 Installation & Setup
+
+## 📦 Installation & Setup
 1. Clone the Repository
 git clone <your-repository-url>
 cd github_connector_project
@@ -103,7 +84,7 @@ Never commit .env files or tokens. They are excluded via .gitignore.
 poetry shell
 
 
-🔐 Authentication
+## 🔐 Authentication
 The client loads the GitHub Personal Access Token from the environment:
 GITHUB_TOKEN=...
 
@@ -139,7 +120,8 @@ Run the script inside the poetry environment:
 poetry run python main.py
 
 
-🧱 Project Structure
+## Project Structure
+```
 github_connector_project/
 ├── github_connector/
 │   ├── __init__.py
@@ -154,12 +136,14 @@ github_connector_project/
 ├── .gitignore
 └── README.md
 
+```
 
-🧪 Testing
+## Testing
 This project uses pytest with unittest.mock to simulate GitHub API responses.
 Run tests:
-poetry run pytest -v
-
+```
+   poetry run pytest -v
+```
 Test Requirements
 ✔ Mocked 200 OK → client returns expected data
 ✔ Mocked 404 Not Found → raises ResourceNotFound
