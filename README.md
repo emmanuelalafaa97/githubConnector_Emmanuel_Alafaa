@@ -104,8 +104,9 @@ Follow GitHub’s instructions to generate a token:
 https://github.com/settings/tokens
 Use the public_repo scope for public repositories.
 
-📘 Usage Example
+ Usage Example
 Inside main.py:
+```
 from github_connector.client import GitHubClient
 
 client = GitHubClient()
@@ -115,9 +116,11 @@ latest_release = client.get_latest_release("psf", "requests")
 
 print(details)
 print(latest_release)
-
+``` 
 Run the script inside the poetry environment:
-poetry run python main.py
+```
+   poetry run python main.py
+```
 
 
 ## Project Structure
