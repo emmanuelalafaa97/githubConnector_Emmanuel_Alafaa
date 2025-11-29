@@ -1,0 +1,3 @@
+{
+  "tests/test_githubAPI_connector.py::test_get_headers_has_token": true
+}
